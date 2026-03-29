@@ -381,8 +381,13 @@ footer{
 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
-  .hero{grid-template-columns:1fr}
-  .hero-right{display:none}
+  .hero{grid-template-columns:1fr; padding-top:0}
+  .hero-left{padding:2rem 5% 3rem; order:2}
+  .hero-right{display:block; order:1; height:60vw; min-height:260px; max-height:380px}
+  .hero-right img{height:100%; width:100%; object-fit:cover; object-position:center top}
+  .hero-right::after{background:linear-gradient(to top, var(--dark) 0%, transparent 50%)}
+  .hero-badge{bottom:1rem; right:1rem}
+  .hero-eyebrow{margin-top:0}
   .sg{grid-template-columns:repeat(2,1fr)}
   .ps{grid-template-columns:repeat(2,1fr)}
   .ps::before{display:none}
@@ -394,13 +399,39 @@ footer{
   .gg-item:nth-child(1) img{height:220px}
   .rg{grid-template-columns:1fr}
   .nm{display:none}
+  .hero-nums{gap:1.5rem}
+  .hero h1{font-size:2.4rem}
+  .strip{gap:1rem; padding:.75rem 5%}
+  .strip-item{font-size:.7rem}
+  .services{padding:4rem 5%}
+  .process{padding:4rem 5%}
+  .about{padding:4rem 5%}
+  .gallery{padding:4rem 5%}
+  .reviews{padding:4rem 5%}
+  .cta{padding:4rem 5%}
 }
 @media(max-width:600px){
   .sg{grid-template-columns:1fr}
   .ps{grid-template-columns:1fr}
-  .strip{gap:1.5rem}
+  .strip{gap:.75rem; flex-wrap:wrap; justify-content:center}
+  .strip-item{font-size:.65rem}
   .gallery-grid{grid-template-columns:1fr}
-  .gg-item img, .gg-item:nth-child(1) img{height:220px}
+  .gg-item img, .gg-item:nth-child(1) img{height:260px}
+  .hero h1{font-size:2rem}
+  .hero-nums{gap:1rem}
+  .hn-val{font-size:1.8rem}
+  .hero-desc{font-size:.9rem}
+  .hero-ctas{flex-direction:column}
+  .btn-wa, .btn-ghost{justify-content:center; text-align:center}
+  .section-h{font-size:1.75rem}
+  .hero-right{height:70vw; max-height:320px}
+  .footer-top{flex-direction:column; gap:1.5rem}
+  .footer-links{flex-wrap:wrap; gap:1rem}
+  .about-imgs{grid-template-columns:1fr}
+  .ai-big, .ai-sm{height:220px !important; grid-column:auto}
+  .tcard{flex-direction:column; text-align:center; align-items:center}
+  .rg{gap:1rem}
+  .rc{padding:1.5rem}
 }
 </style>
 </head>
